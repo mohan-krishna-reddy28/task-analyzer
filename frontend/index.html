@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>🧠 Smart Task Analyzer</h1>
+    <p>Paste your tasks below in JSON format and click Analyze.</p>
+
+    <div class="layout">
+        <!-- Left Panel: Input -->
+        <div class="left-panel">
+            <h2>Task Input</h2>
+            <textarea id="taskInput" rows="18" placeholder="Enter JSON here"></textarea>
+
+            <div class="controls">
+                <select id="strategy">
+                    <option value="default">Sort by Score (Default)</option>
+                    <option value="deadline">Deadline Driven</option>
+                    <option value="quickwins">Quick Wins (Less Effort)</option>
+                </select>
+                <button id="analyzeBtn">Analyze</button>
+                <button id="suggestBtn" class="secondary">Suggest Top 3</button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Results -->
+        <div class="right-panel">
+            <h2>Results</h2>
+            <div id="results"></div>
+            
+            <h2>Suggestions</h2>
+            <div id="suggestions"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
